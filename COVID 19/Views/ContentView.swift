@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    let covidManager = CovidManager()
+    
     var body: some View {
-        Text("Hello, World!")
+        HomeView(covidManager: covidManager)
+//        NavigationView {
+//            .navigationBarTitle("COVID-19")
+//        }
     }
+   
 }
 
 struct ContentView_Previews: PreviewProvider {
