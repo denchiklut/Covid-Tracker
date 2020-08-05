@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CovidManagerDelegate {
-    func didUpdateData(_ covidManager: CovidManager, covid: CovidModel)
+    func didUpdateData(_ covidManager: CovidManager, covid: CovidViewModel)
     func didFailWithError(_ covidManager: CovidManager, error: Error)
 }
 
@@ -36,7 +36,7 @@ class CovidManager {
         }
     }
     
-    func parceJSON(_ covidData: Data) -> CovidModel? {
+    func parceJSON(_ covidData: Data) -> CovidViewModel? {
         let decoder = JSONDecoder()
     
         do {
@@ -45,7 +45,7 @@ class CovidManager {
             let countries = decodedData.Countries
             let global = decodedData.Global
             
-            let covidModel = CovidModel(
+            let covidModel = CovidViewModel(
                 date: date,
                 countries: countries,
                 global: global
@@ -58,7 +58,7 @@ class CovidManager {
         }
     }
     
-    func getData() {
+    func fetchData() {
         performRequest(with: apiURL)
     }
 }

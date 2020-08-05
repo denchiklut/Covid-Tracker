@@ -45,12 +45,16 @@ struct TotalView: View {
                         .modifier(largeText())
                 }
                 Spacer()
+                Divider().frame(height: 40)
+                Spacer()
                 VStack {
                     Text("Выздоровело")
                         .modifier(samllText())
                     Text(totalRecovered)
                         .modifier(largeText())
                 }
+                Spacer()
+                Divider().frame(height: 40)
                 Spacer()
                 VStack {
                     Text("Умерло")
@@ -61,8 +65,6 @@ struct TotalView: View {
             }
         }
         .padding()
-        .background(Color("BackgroundColor"))
-        
     }
 }
 

@@ -6,10 +6,10 @@
 //  Copyright © 2020 Александров Денис Александрович. All rights reserved.
 //
 
+import Foundation
+
 struct CountryData: Codable, Identifiable {
-    var id: String {
-        return Country
-    }
+    let id = UUID()
     
     let Country: String
     let CountryCode: String

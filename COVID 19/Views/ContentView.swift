@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    let covidManager = CovidManager()
+    let covidViewModel = CovidViewModel()
     
     var body: some View {
-        HomeView(covidManager: covidManager)
+        HomeView()
 //        NavigationView {
 //            .navigationBarTitle("COVID-19")
 //        }
